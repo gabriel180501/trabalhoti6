@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Conta</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="page">
+        <form id="createAccountForm" class="formLogin">
+            <h1>Criar Conta</h1>
+            <p>Preencha os campos abaixo para criar uma nova conta.</p>
+            <label for="name">Nome</label>
+            <input type="text" id="name" placeholder="Digite seu nome" required autofocus />
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="Digite seu e-mail" required />
+            <label for="password">Senha</label>
+            <input type="password" id="password" placeholder="Digite sua senha" required />
+            <a href="login.html">Já tenho uma conta</a>
+            <input type="submit" value="Registrar" class="btn" />
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('createAccountForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            // Perform register request
+           /* const response = await fetch('/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name, email, password })
+            });*/
+            const response =  true;
+
+           // if (response.ok) {
+            if (response == true){
+                alert('Conta criada com sucesso!');
+                window.location.href = "login.html"; // Redirect to login page
+            } else {
+                alert('Falha ao criar conta');
+            }
+        });
+    </script>
+</body>
+</html>
