@@ -8,9 +8,9 @@ document.getElementById('uploadForm').addEventListener('submit', function(event)
     }
 
     const formData = new FormData();
-    formData.append('image', input.files[0]);
+    formData.append('file', input.files[0]);
 
-    fetch('http://localhost:5000/upload', {
+    fetch('http://localhost:5000/predict', {
         method: 'POST',
         body: formData
     })
