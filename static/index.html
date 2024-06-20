@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload de Imagem</title>
+    <title>Food Tracker</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,7 +13,9 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #f7f7f7;
+            /* background-color: #b6c471; */
+            background: url('background.png') no-repeat center center fixed;
+            background-size: cover;
         }
         .container {
             display: flex;
@@ -58,12 +60,13 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
+
     </style>
 </head>
 <body>
     <div class="container">
         <div class="image-section">
-            <h2>Imagem original que foi enviada pelo cliente</h2>
+            <h2>Imagem Enviada</h2>
             <img id="uploadedImage" src="#" alt="Uploaded Image" style="display: none;">
             <div class="upload-btn-wrapper">
                 <button onclick="document.getElementById('fileInput').click()">Upload Image</button>
@@ -71,9 +74,9 @@
             </div>
         </div>
         <div class="result-section">
-            <h2 id="classificationResultTitle">Resultado da Classificação</h2>
+            <h2 id="classificationResultTitle">Resultado da Classificação:</h2>
             <div id="classificationResult">
-                <p>Tabela nutricional</p>
+                <p>Tabela Nutricional</p>
                 <ul id="nutritionList"></ul>
             </div>
         </div>
